@@ -24,6 +24,27 @@ export const getSsrHeader = (ctx) => {
   return headers;
 };
 
+export const getSeoObject = (language, title, description, url, picture) => {
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      url: url,
+      images: [
+        {
+          url: picture,
+          width: 800,
+          height: 600,
+          alt: `${title}`,
+        },
+      ],
+    },
+    twitter: {
+      cardType: "summary_large_image",
+    },
+  };
+};
+
 export const addCookie = (key, value, expiry = 0) => {
   const domain = window.location.hostname;
   document.cookie = `${key}=${value};domain=${domain};path=/${

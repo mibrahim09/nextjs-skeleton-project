@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "BUILD_ENV=development NEXT_PUBLIC_BUILD_ENV=development HTTPS=true next dev -p 8000",
-    "build": "next build",
+    "build": "BUILD_ENV=production NEXT_PUBLIC_BUILD_ENV=production next build",
+    "build:staging": "BUILD_ENV=staging NEXT_PUBLIC_BUILD_ENV=staging next build",
+    "build:development": "BUILD_ENV=development NEXT_PUBLIC_BUILD_ENV=development next build",
     "start": "next start",
     "lint": "next lint"
   },

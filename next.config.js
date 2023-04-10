@@ -52,6 +52,11 @@ const nextConfig = {
             },
         ];
     },
+    i18n: {
+        locales: ['en', 'ar'],
+        defaultLocale: 'en',
+        fallbackLng: 'en'
+    },
 }
 
 module.exports = nextConfig

@@ -1,0 +1,27 @@
+export const I18N_LANGUAGE_EN = 'en';
+export const I18N_LANGUAGE_AR = 'ar';
+
+export const I18N_DIRECTION_LTR = 'ltr';
+export const I18N_DIRECTION_RTL = 'rtl';
+
+export const I18N_LANGUAGES = {
+	[I18N_LANGUAGE_EN]: I18N_LANGUAGE_EN,
+	[I18N_LANGUAGE_AR]: I18N_LANGUAGE_AR
+};
+
+export const I18N_LANGUAGES_LABELS = {
+	[I18N_LANGUAGE_EN]: 'English',
+	[I18N_LANGUAGE_AR]: 'عربى'
+};
+
+export const I18N_DIRECTIONS = {
+	[I18N_LANGUAGE_EN]: I18N_DIRECTION_LTR,
+	[I18N_LANGUAGE_AR]: I18N_DIRECTION_RTL
+};
+
+export const I18N_ISO_LOCALE = {
+	[I18N_LANGUAGE_EN]: 'en-US',
+	[I18N_LANGUAGE_AR]: 'ar-EG'
+};
+
+export const I18N_DEFAULT_LANGUAGE = I18N_LANGUAGES[process.env.NEXT_PUBLIC_DEFAULT_LANG] ?? I18N_LANGUAGE_EN;
